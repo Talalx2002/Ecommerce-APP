@@ -1,7 +1,9 @@
 # Ecommerce-APP
+Welcome to the Ecommerce-APP project! This application provides a seamless experience for users to engage in online shopping activities. Below, you'll find an overview of the various screens within the app:
 
 ## Description
-Welcome to the Ecommerce-APP project! This application provides a seamless experience for users to engage in online shopping activities. Below, you'll find an overview of the various screens within the app:
+This project is an E-commerce application developed using Firebase and React Native. It consists of various screens including a login page, seller screen, buyer screen, cart screen, and checkout screen.
+
 
 **Login Page**  
 ![Login Page](https://github.com/Talalx2002/Ecommerce-APP/assets/98464284/e609c7c2-e531-4709-b1a2-0eb4858e2f5c)
