@@ -1,0 +1,50 @@
+  async function writeData() {
+    await setDoc(doc(db, "products", "DmlLOBAYUtoQAOhGHZZg"), {
+    name: "Kamal Ahmed23",
+    age: "22"
+    });
+    }
+
+    async function readData() {
+      const docRef = doc(db, "products", "DmlLOBAYUtoQAOhGHZZg");
+      const docSnap = await getDoc(docRef);
+      if (docSnap.exists()) {
+      console.log("Document data:", docSnap.data());
+      } else {
+      // doc.data() will be undefined in this case
+      console.log("No such document!");
+      }
+      }
+
+      async function updateData() {
+        try {
+          const docRef = doc(db, 'products', 'DmlLOBAYUtoQAOhGHZZg'); // Reference to the document to update
+          await updateDoc(docRef, { name1: 'rahid', age: 25 }); // Fields and values to update
+          console.log('Document updated successfully!');
+        } catch (error) {
+          console.error('Error updating document:', error);
+        }
+      }
+
+      async function deleteDocument() {
+        try {
+          const docRef = doc(db, 'products', 'DmlLOBAYUtoQAOhGHZZg'); // Reference to the document to delete
+          await deleteDoc(docRef); // Delete the specified document
+          console.log('Document deleted successfully!');
+        } catch (error) {
+          console.error('Error deleting document:', error);
+        }
+      }
+
+      async function getCollection() {
+        try {
+          const collectionRef = collection(db, 'products'); // Reference to the 'products' collection
+          const querySnapshot = await getDocs(collectionRef); // Retrieve all documents in the collection
+      
+          querySnapshot.forEach(doc => {
+            console.log('Document ID:', doc.id, ' => Document data:', doc.data());
+          });
+        } catch (error) {
+          console.error('Error getting collection:', error);
+        }
+      }
